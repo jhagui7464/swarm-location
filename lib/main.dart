@@ -1,19 +1,25 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'screens/ShowScreen.dart';
 
-class ShowScreen extends StatefulWidget {
-  @override
-  _ShowScreenState createState() => _ShowScreenState();
+void main() {
+  runApp(MyApp());
 }
 
-class _ShowScreenState extends State<ShowScreen> {
-  @override
-  initState() {
-    super.initState();
-  }
+class MyApp extends StatelessWidget {
+  // This widget is the root of your application.
 
+  @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(),
+    //SystemChrome.setEnabledSystemUIOverlays([]);
+    SystemChrome.setEnabledSystemUIOverlays(SystemUiOverlay.values);
+    return MaterialApp(
+      title: 'Flutter Demo',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+        visualDensity: VisualDensity.adaptivePlatformDensity,
+      ),
+      home: ShowScreen(),
     );
   }
 }
