@@ -1,26 +1,15 @@
+//flutter_bluetooth_serial_example
+//https://github.com/edufolly/flutter_bluetooth_serial/tree/master/example
+
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'screens/ShowScreen.dart';
-import 'screens/MapScreen.dart';
 
-void main() {
-  runApp(MyApp());
-}
+import './MainPage.dart';
 
-class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
+void main() => runApp(new ExampleApplication());
 
+class ExampleApplication extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    //SystemChrome.setEnabledSystemUIOverlays([]);
-    SystemChrome.setEnabledSystemUIOverlays(SystemUiOverlay.values);
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-        visualDensity: VisualDensity.adaptivePlatformDensity,
-      ),
-      home: MapScreen(),
-    );
+    return MaterialApp(home: MainPage());
   }
 }
